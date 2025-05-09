@@ -1,0 +1,60 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+.business {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+
+    @include v.mq() {
+      flex-direction: row;
+      column-gap: 64px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+
+    @include v.mq() {
+      row-gap: 50px;
+    }
+
+    &-top {
+      @include v.mq() {
+        padding-top: 100px;
+      }
+    }
+  }
+
+  &-item {
+    &-title {
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+      font-weight: 400;
+      @include v.rem(14);
+      margin-bottom: 9px;
+
+      &::before {
+        content: "";
+        background-color: v.$c-main;
+        width: 8px;
+        height: 1px;
+      }
+    }
+
+    &-img {
+      opacity: 0;
+      overflow: hidden;
+
+      img:hover {
+        transition: all .8s ease;
+        transform: scale(1.05);
+        filter: blur(2px);
+      }
+    }
+  }
+}

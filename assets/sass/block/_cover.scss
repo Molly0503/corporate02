@@ -1,0 +1,16 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+.cover {
+  padding-top: 80px;
+
+  .js-fadein {
+    opacity: 0;
+    transition: all 3s;
+  }
+  
+  .js-fadein-show {
+    opacity:1;
+  }
+  
+}
